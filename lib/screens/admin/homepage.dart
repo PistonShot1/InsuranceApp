@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AdminHomepage extends StatefulWidget {
   const AdminHomepage({super.key});
@@ -10,6 +12,21 @@ class AdminHomepage extends StatefulWidget {
 }
 
 class _AdminHomepageState extends State<AdminHomepage> {
+  @override
+  late FirebaseFirestore db;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    db = FirebaseFirestore.instance;
+    final user = <String, dynamic>{
+      "first": "Alan",
+      "middle": "Mathison",
+      "last": "Turing",
+      "born": 1912
+    };
+    db.collection("users").add(user);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,8 +129,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                           scrollDirection: Axis.horizontal,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(16, 0, 0, 12),
+                                              padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 12),
                                               child: Container(
                                                 height: 120,
                                                 decoration: BoxDecoration(
