@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AdminHomepage extends StatefulWidget {
@@ -14,6 +11,7 @@ class AdminHomepage extends StatefulWidget {
 class _AdminHomepageState extends State<AdminHomepage> {
   @override
   late FirebaseFirestore db;
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -47,18 +45,18 @@ class _AdminHomepageState extends State<AdminHomepage> {
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
+                            SizedBox(
                               height: 240,
                               child: Stack(
                                 children: [
                                   Container(
                                     width: double.infinity,
                                     height: 100,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.white,
                                     ),
-                                    alignment: AlignmentDirectional(-1, 0),
-                                    child: Padding(
+                                    alignment: const AlignmentDirectional(-1, 0),
+                                    child: const Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0, 0, 16, 0),
                                       child: Row(
@@ -85,14 +83,14 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0, 75, 0, 0),
                                     child: Container(
                                       height: 90,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Colors.white,
                                       ),
-                                      child: Column(
+                                      child: const Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -115,13 +113,13 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0, 1),
+                                    alignment: const AlignmentDirectional(0, 1),
                                     child: Container(
                                       width: double.infinity,
                                       height: 160,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0, 30, 0, 0),
                                         child: ListView(
                                           padding: EdgeInsets.zero,
@@ -129,12 +127,12 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                           scrollDirection: Axis.horizontal,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 12),
+                                              padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 12),
                                               child: Container(
                                                 height: 120,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 4,
                                                       color: Color(0x1F000000),
@@ -149,7 +147,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(12, 0, 12, 0),
                                                   child: Row(
                                                     mainAxisSize:
@@ -159,19 +157,19 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                         width: 60,
                                                         height: 60,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           color: Colors.white,
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0, 0),
                                                         child: Card(
                                                           clipBehavior: Clip
                                                               .antiAliasWithSaveLayer,
                                                           color:
-                                                              Color(0xFF23A8FF),
+                                                              const Color(0xFF23A8FF),
                                                           shape:
                                                               RoundedRectangleBorder(
                                                             borderRadius:
@@ -179,7 +177,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                                     .circular(
                                                                         40),
                                                           ),
-                                                          child: Padding(
+                                                          child: const Padding(
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
@@ -197,7 +195,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Padding(
+                                                      const Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(12,
@@ -249,13 +247,13 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(16, 0, 0, 12),
                                               child: Container(
                                                 height: 120,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 4,
                                                       color: Color(0x1F000000),
@@ -270,7 +268,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(12, 0, 12, 0),
                                                   child: Row(
                                                     mainAxisSize:
@@ -280,19 +278,19 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                         width: 60,
                                                         height: 60,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           color: Colors.white,
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0, 0),
                                                         child: Card(
                                                           clipBehavior: Clip
                                                               .antiAliasWithSaveLayer,
                                                           color:
-                                                              Color(0xFF23A8FF),
+                                                              const Color(0xFF23A8FF),
                                                           shape:
                                                               RoundedRectangleBorder(
                                                             borderRadius:
@@ -300,7 +298,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                                     .circular(
                                                                         40),
                                                           ),
-                                                          child: Padding(
+                                                          child: const Padding(
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
@@ -318,7 +316,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Padding(
+                                                      const Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(12,
@@ -370,13 +368,13 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(16, 0, 16, 12),
                                               child: Container(
                                                 height: 120,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 4,
                                                       color: Color(0x1F000000),
@@ -391,7 +389,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(12, 0, 12, 0),
                                                   child: Row(
                                                     mainAxisSize:
@@ -401,19 +399,19 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                         width: 60,
                                                         height: 60,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           color: Colors.white,
                                                           shape:
                                                               BoxShape.circle,
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0, 0),
                                                         child: Card(
                                                           clipBehavior: Clip
                                                               .antiAliasWithSaveLayer,
                                                           color:
-                                                              Color(0xFF23A8FF),
+                                                              const Color(0xFF23A8FF),
                                                           shape:
                                                               RoundedRectangleBorder(
                                                             borderRadius:
@@ -421,7 +419,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                                     .circular(
                                                                         40),
                                                           ),
-                                                          child: Padding(
+                                                          child: const Padding(
                                                             padding:
                                                                 EdgeInsetsDirectional
                                                                     .fromSTEB(
@@ -439,7 +437,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Padding(
+                                                      const Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(12,
@@ -502,7 +500,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       16, 8, 0, 0),
                                   child: Text(
@@ -516,7 +514,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0, 0, 0, 10),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -524,7 +522,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                       Flexible(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15, 0, 20, 0),
                                           child: ClipRRect(
                                             borderRadius:
@@ -539,25 +537,25 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0, 0, 20, 0),
                                         child: Container(
                                           width: 60,
                                           height: 60,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.white,
                                             shape: BoxShape.circle,
                                           ),
-                                          alignment: AlignmentDirectional(0, 0),
+                                          alignment: const AlignmentDirectional(0, 0),
                                           child: Card(
                                             clipBehavior:
                                                 Clip.antiAliasWithSaveLayer,
-                                            color: Color(0xFF23A8FF),
+                                            color: const Color(0xFF23A8FF),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(40),
                                             ),
-                                            child: Padding(
+                                            child: const Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(12, 12, 12, 12),
                                               child: Icon(
@@ -592,7 +590,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                               scrollDirection: Axis.vertical,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16, 12, 16, 0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -605,7 +603,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                       width: double.infinity,
                                       decoration: BoxDecoration(
                                         color: Colors.white,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4,
                                             color: Color(0x1F000000),
@@ -619,7 +617,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0, 0, 0, 12),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -627,7 +625,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                               CrossAxisAlignment.center,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(12, 8, 16, 4),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -635,7 +633,7 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  Padding(
+                                                  const Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(
@@ -711,24 +709,24 @@ class _AdminHomepageState extends State<AdminHomepage> {
                                                   Container(
                                                     width: 60,
                                                     height: 60,
-                                                    decoration: BoxDecoration(
+                                                    decoration: const BoxDecoration(
                                                       color: Colors.white,
                                                       shape: BoxShape.circle,
                                                     ),
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0, 0),
                                                     child: Card(
                                                       clipBehavior: Clip
                                                           .antiAliasWithSaveLayer,
-                                                      color: Color(0xFF23A8FF),
+                                                      color: const Color(0xFF23A8FF),
                                                       shape:
                                                           RoundedRectangleBorder(
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(40),
                                                       ),
-                                                      child: Padding(
+                                                      child: const Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(12,

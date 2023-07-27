@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:insurance_app/screens/admin/homepage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:insurance_app/screens/customer/detail.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,6 +20,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Raleway'),
-        home: const AdminHomepage());
+        home: const CustomerDetail());
   }
 }
