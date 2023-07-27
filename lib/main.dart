@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:insurance_app/screens/customer/detail.dart';
+import 'package:insurance_app/screens/customer/report.dart';
 import 'firebase_options.dart';
+import 'package:insurance_app/screens/admin/homepage.dart';
+import 'package:insurance_app/screens/consultant/homepage.dart';
+import 'package:insurance_app/screens/consultant/reward.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +24,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Raleway'),
-        home: const AdminHomepage());
+        home: const Reward());
   }
 }
